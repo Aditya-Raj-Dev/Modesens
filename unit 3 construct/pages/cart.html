@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5428de7a15.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+        #container{
+            margin-top: 50px;
+            margin-left: 10%;
+            margin-bottom: 100px;
+        }
+        #prod{
+            display: flex;
+            justify-content: space-around;
+            width:80%;
+            margin:auto;
+        }
+         h4{
+             margin-bottom: 50px;
+         }
+         #img{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+         }
+         button{
+             height:55px;
+             width:400px;
+             
+             text-align: center;
+             margin-top: 40px;
+             color: white;
+             background-color: black;
+             
+         }
+         button:hover{
+            border: 1px solid black;
+            background-color: grey;
+             cursor: pointer;
+             
+         }
+         #proddetail{
+             margin-left: 10%;
+             gap:20px;
+         }
+
+        #proddetail p{
+            margin-top: 50px;
+        }
+        #photo{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div id="container">
+        <h4>MODESENS / 
+            DESIGNERS / 
+            NATURA BISSÉ / 
+            WOMEN / 
+            BEAUTY / 
+            SKINCARE</h4>
+            <div id="prod">
+                <div id="img">
+                </div>
+                <div>
+                    <div id="details">
+                        
+                    </div>
+                    <h3>Shop From 8 Stores</h3>
+                    <button id="checkout">SELECT PRODUCT TO BUY</button>
+                    <h4>Earn up to 52 points from this purchase.</h4>
+                </div>
+            </div>
+    </div>
+    <div id="proddetail">
+            <h2>Product Details</h2>
+            <hr>
+             <h1>Details About the product What people Say</h1>
+            <div style="display:flex;gap:40px;">
+               
+                <div id="photo">
+                </div>
+                <p>Discover a brighter and more even complexion with the Dermalogica C-12 Pure Bright Serum. This potent topical treatment applies with a lightweight, silky texture that absorbs into the skin quickly to optimise efficacy. The innovative formulation features a blend of active ingredients to help combat hyperpigmentation such as brown spots, discoloration and uneven skin tone, while correcting the appearance of dullness. An exclusive combination of Oligopeptides and Phytic Acid derived from rice help to inhibit the overproduction of melanin to prevent the appearance of discolouration, treating hyperpigmentation at its source. Zinc Glycinate provides antioxidant benefits to help reinforce the skin’s natural defences and protect the complexion against the damaging effects of environmental aggressors.</p>
+            </div>
+    </div>
+    <div id="foot"></div>
+</body>
+</html>
+<script type="module">
+
+import {navbar,footer} from "../components/navbar.js"
+
+ let header=document.getElementById("header")
+   header.innerHTML=navbar();
+
+   let foot=document.getElementById("foot")
+   foot.innerHTML=footer();
+
+   let product=JSON.parse(localStorage.getItem("product"))
+   console.log(product)
+ function showdata(data){
+     let image=document.getElementById("img")
+
+     let details=document.getElementById("details")
+
+     let photo=document.getElementById("photo")
+
+     data.map(function(el){
+         let img=document.createElement("img")
+         img.src=el.img;
+         img.style.height="390px"
+         img.style.width="300px"
+
+         image.append(img)
+
+
+         let p=document.createElement("img")
+         p.src=el.img;
+         p.style.height="150px"
+         photo.append(p)
+          
+         let div=document.createElement("div")
+        
+            let name=document.createElement("h2")
+            name.innerText=el.name;
+
+            let type=document.createElement("h2")
+            type.innerText=el.type;
+            type.style.color="grey";
+
+            let price=document.createElement("h2")
+            price.innerText=` Price : ${el.price}`
+
+           div.append(name,type,price)
+           details.append(div)
+     })
+ }
+showdata(product)
+
+document.getElementById("checkout").addEventListener("click",checkout)
+
+function checkout(){
+    window.location.href="bag.html"
+}
+
+let login= document.querySelector(".fa-regular")
+login.addEventListener("click",function(){
+    window.location.href="./login.html"
+})
+</script>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5428de7a15.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <style>
+        .notification {
+  
+  text-decoration: none;
+  padding: 0px 6px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+*{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+        #container{
+            margin-top: 50px;
+            margin-left: 10%;
+            margin-bottom: 100px;
+        }
+        #prod{
+            display: flex;
+            justify-content: space-around;
+            width:80%;
+            margin:auto;
+            margin-top: 100px;
+        }
+         h4{
+             margin-bottom: 50px;
+         }
+         #img{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+         }
+         button{
+             height:55px;
+             width:400px;
+             
+             text-align: center;
+             margin-top: 40px;
+             color: white;
+             background-color: rgb(15, 15, 65);
+             border-radius: 50px;
+             
+         }
+         button:hover{
+            border: 1px solid black;
+            background-color: black;
+             cursor: pointer;
+             
+         }
+         #proddetail{
+             margin-left: 10%;
+             gap:20px;
+         }
+         .fa-thin{
+             color:white;
+             font-size: 40px;
+         }
+
+        #proddetail p{
+            margin-top: 50px;
+        }
+        #photo{
+            margin: 0;
+        }
+        .fa-solid{
+            font-size: 40px;
+            margin-top: 10px;
+            
+            padding: 0;
+        }
+        #footer {
+            margin-top: 0px;
+        }
+        #cart{
+            
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding:10px;
+            position:auto;
+            text-align: center;
+           
+        }
+        #maindiv{
+            gap:40px;
+        }
+        #h1{
+            color:blue;
+            background-color:black;
+            width:40%;
+            margin:auto;
+            margin-bottom: 15px;
+        }
+        #check{
+            height:55px;
+             width:400px;
+             font-size: 27px;
+             text-align: center;
+             margin-top: 40px;
+             color: white;
+             background-color: black;
+             border-radius: 5px;
+             
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="page">
+            <h1>MODESENS</h1>
+            <h4 id="women">WOMEN</h4>
+            <h4 id="men">MEN</h4>
+            <h4 id="beauty">BEAUTY</h4>
+            <h4 id="kids">KIDS</h4>
+            <h4 id="home">HOME</h4>
+            <h4 id="offer">OFFERS</h4>
+            <h4 id="designs">DESIGNERS</h4>
+            <h4 id="community">COMMUNITY</h4>
+            <h4 id="why">WHY MODESENS</h4>
+        </div>
+        <div >
+            <div id="profile">
+                <img src="https://www.websticker.com/wp-content/uploads/2016/02/flag1.2.jpg" alt="">
+                <i class="fa-solid fa-circle-user"></i>
+                <a href="#" class="notification">
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    <span class="badge">0</span>
+                  </a>
+            </div>
+            <div id="cart1"></div>
+            <div id="cart">
+                <div style="display:flex; gap:20px; margin:auto;width:40%;">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h1>CART</h1>
+                </div>
+                </div>
+                
+            
+              
+        </div>
+        </div>
+        <div id="prod">
+            <div id="img">
+            </div>
+            <div style="margin-left: 20%;">
+                <div id="details">
+                    
+                </div>
+                <div style="display:flex;gap:10px;">
+                    <i class="fa-solid fa-truck-fast"></i>
+                <h3>Free Shipping over $35 & Free Returns </h3>
+                </div>
+                
+                <button id="checkout">ADD TO BAG</button>
+                <h4>Description</h4>
+                <hr>
+                <p >
+                    Item has longer than usual delivery time.
+                    Our Best Price Guarantee
+                    The Melamine Lastra White Large Stacking Serving Bowl is simple, sophisticated, and chic. Made of 1% melamine and BPA free, the Melamine Lastra collection folds in perfectly to any eating or serving assortment.</p>
+            </div>
+        </div>
+</div>
+<div id="proddetail">
+        <h2>Product Review</h2>
+        <hr>
+         <h1>RATINGS ⭐⭐⭐⭐⭐</h1>
+        <div style="display:flex;gap:40px;">
+            <div id="photo">
+            </div>
+            <i class="fa-solid fa-mobile"></i>
+            <h2>You Can Also Download Our App</h2>
+            <h3></h3>
+        </div>
+        <h3>Be the first person to review this item!</h3>
+        <div style="display:flex">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+        
+        </div>
+       
+</div>
+        <div id="foot"></div>
+</body>
+</html>
+<script type="module">
+import {navbar,footer} from "../components/navbar.js"
+
+
+
+let foot=document.getElementById("foot")
+foot.innerHTML=footer()
+
+let product=JSON.parse(localStorage.getItem("product"))
+   console.log(product)
+ function showdata(data){
+     let image=document.getElementById("img")
+
+     let details=document.getElementById("details")
+
+     let photo=document.getElementById("photo")
+
+     data.map(function(el){
+         let img=document.createElement("img")
+         img.src=el.img;
+         img.style.height="390px"
+         img.style.width="300px"
+
+         image.append(img)
+
+
+         let p=document.createElement("img")
+         p.src=el.img;
+         p.style.height="150px"
+         photo.append(p)
+          
+         let div=document.createElement("div")
+        
+            let name=document.createElement("h2")
+            name.innerText=el.name;
+
+            let type=document.createElement("h2")
+            type.innerText=el.type;
+            type.style.color="grey";
+
+            let color=document.createElement("h1")
+            color.innerText="Color-Default"
+
+            let price=document.createElement("h2")
+            price.innerText=` Price : ${el.price}`
+
+           div.append(type,color,price)
+           details.append(div)
+     })
+ }
+showdata(product)
+
+let bag=document.getElementById("checkout")
+bag.addEventListener("click",function(){
+    checkout()
+})
+let i=  1;
+let badge=document.querySelector(".badge")
+badge.innerText= i;
+
+var detail=JSON.parse(localStorage.getItem("product"))
+console.log(detail);
+
+function checkout(){
+    event.preventDefault()
+    localStorage.setItem("count",JSON.stringify(i))
+    badge.innerText=i
+    i++;
+    console.log(badge)
+    let q=document.querySelector(".badge").innerText;
+    console.log("q",q)
+    if(q==="0"){
+        let prod=document.getElementById("cart")
+        prod.style.display="none"
+    }
+    else{
+        showdatacart(detail)
+    }
+    
+
+   
+}
+
+function showdatacart(data){
+    let prod=document.getElementById("cart")
+    prod.innerHTML=null;
+    
+        data.map(function(el){
+            let maindiv=document.createElement("div")
+            maindiv.style.display="flex"
+            maindiv.setAttribute("id","maindiv")
+            let div1=document.createElement("div")
+            let h1=document.createElement("h1")
+            h1.setAttribute("id","h1")
+            
+             
+            let img=document.createElement("img")
+            img.src=el.img
+            img.style.height="200px";
+            img.style.width="200px";
+        
+            div1.append(img)
+
+            let div2=document.createElement("div")
+
+            let name=document.createElement("h1")
+            name.innerText=el.name;
+            let type=document.createElement("h3")
+            type.innerText=`Product Catogry : ${el.type}`
+            let price=document.createElement("h3")
+            price.innerText=`price: ${el.price}`
+
+            let quan=document.createElement("h3")
+            let x= JSON.parse(localStorage.getItem("count"))
+            quan.innerText=`Quantity : ${x}`
+
+            let button=document.createElement("button")
+            button.setAttribute("id","check")
+            button.innerText="Checkout"
+
+           
+            
+            div2.append(name,type,price,quan)
+            maindiv.append(div1,div2)
+            prod.append(h1,maindiv,button)
+           
+        })
+
+        document.getElementById("check").addEventListener("click",final)
+    
+    function final(){
+     console.log("hshas")
+    window.location.href="checkout.html"
+  }
+    } 
+    showdatacart(detail)
+
+    
+
+    
+    
+</script>

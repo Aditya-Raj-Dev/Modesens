@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5428de7a15.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+        #info{
+            display:flex;
+            gap:20px;
+        }
+      
+        #top{
+            
+            display: flex;
+            gap:20px
+        }
+        #right{
+            margin-left: 10%;
+        }
+      
+        .fa-solid{
+            font-size: 40px;
+            margin-top: 15px;
+        }
+        #box{
+            display: flex;
+            justify-content: space-between;
+            width:80%;
+        }
+        #delivery input{
+            margin-bottom: 30px;
+            border-radius: 5px;
+            height:46px;
+        }
+        .big{
+            height:46px;
+            width:850px
+        }
+        .margin{
+         margin-right: 40px;
+        }
+        .half input{
+            width:400px;
+         
+        }
+        .half{
+            display: flex;
+        }
+        ::placeholder{
+            font-size:large;
+        }
+        .continue,.submit{
+            height:50px;
+            width:400px;
+            background-color: black;
+            color: white;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        #left{
+            background-color: rgba(243, 241, 241, 0.979);
+            padding:2%;
+        }
+        #prod{
+            display:flex;
+            gap:20px;
+        }
+   
+        
+    </style>
+</head>
+<body>
+    <h1>MODESENS</h1>
+    <div id="box">
+        <div id="right">
+            <hr>
+            <div id="top">
+                
+                <i class="fa-solid fa-lock"></i>
+                <h1> Secure Checkout</h1>
+            </div>
+            <hr>
+            <div style="display:flex; gap:20px;">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h2> Delivery Address<Address></Address></h2>
+            </div>
+            <div id="delivery">
+                <input type="text" placeholder="Email" class="big" id="email">
+                <div class="half">
+                    <input type="text" placeholder="First Name" class="margin" id="fname">
+                    <input type="text" placeholder="Last Name" id="lname">
+                </div>
+                <input type="text" placeholder="Address" class="big" id="add">
+                <div class="half">
+                    <input type="text" placeholder="Address 2 (optionl)" class="margin">
+                    <input type="text" placeholder="Postal Code" id="code">
+                </div>
+                <div class="half">
+                    <input type="text" placeholder="City" class="margin" id="city">
+                    <input type="text" placeholder="Region (Optional)">
+                </div>
+                <div class="half">
+                    <input type="text" placeholder="Phone" class="margin" id="phone">
+                    <input type="text" placeholder="Location" id="location">
+                </div>
+                <button class="submit" id="submit">SUBMIT</button>
+           </div>
+           <div id="gif"></div>
+        </div>
+
+        <div id="left">
+            <div id="placed">
+            <div style="display:flex; gap:20px;margin-left: 25%;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h1>Your Order</h1>
+            </div>
+            <button class="continue" id="continue">Continue</button>
+            <div style="display:flex; justify-content: space-between;">
+                <h4>Item </h4>
+                <h4 id="cost"></h4>
+             </div>
+            <div style="display:flex; justify-content: space-between;">
+               <h4>shippping</h4>
+               <h4>$30</h4>
+            </div>
+            <div style="display:flex; justify-content: space-between;">
+                <h4>Duties & Taxes </h4>
+                <h4>$10</h4>
+             </div>
+            
+             <div style="display:flex; justify-content: space-between;">
+                <h1>TOTAL </h1>
+                <h1 id="total">(INR) ₹31,286
+                </h1>
+             </div>
+             <hr>
+             <h4 style="color:blue">+ Promo code</h4>
+             <hr>
+             <div id="prod">
+
+             </div>
+        </div>
+    </div>
+    </div>
+    
+    
+</body>
+</html>
+<script>
+    var detail=JSON.parse(localStorage.getItem("product"))
+    console.log(detail)
+ 
+    let cost=document.getElementById("cost").innerText= detail[0].price;
+    let i=detail[0].price;
+    i=i.trim().split("")
+    let bag="";
+    for(var j=1; j<i.length; j++){
+        bag+=i[j]
+    }
+    bag= +bag
+    
+   
+    let  total=document.getElementById("total").innerText= `(INR) ₹${bag*70}`
+
+    function showdata(data){
+        let prod=document.getElementById("prod")
+        data.map(function(el){
+            let div1=document.createElement("div")
+
+            let img=document.createElement("img")
+            img.src=el.img
+            img.style.height="150px"
+
+            div1.append(img)
+
+            let div2=document.createElement("div")
+
+            let name=document.createElement("p")
+            name.innerText=el.name;
+            let type=document.createElement("p")
+            type.innerText=el.type;
+            let price=document.createElement("p")
+            price.innerText=el.price;
+            let store=document.createElement("p")
+            store.innerText=el.store;
+            
+            div2.append(name,type,price,store)
+            prod.append(div1,div2)
+        })
+    } 
+    showdata(detail)
+
+let submit=document.getElementById("submit").addEventListener("click",deliveryadd)
+
+function address(id){
+    return document.getElementById(id)
+}
+
+
+function deliveryadd(){
+    let email= address("email").value
+    let fname=address("fname").value
+    let lname=address("lname").value
+    let add=address("add").value
+    let code=address("code").value
+    let city=address("city").value
+    let phone=address("phone").value
+    let location=address("location").value
+
+    if(email==""  || fname=="" || lname==""  || add==="" || code=="" || city=="" || phone=="" || location==""){
+        alert("Please fill all The Details")
+    }else{
+        let delivery=document.getElementById("delivery")
+        delivery.style.display="none";
+        let img=document.createElement("img")
+        img.src="https://i.pinimg.com/originals/91/36/df/9136df0949a40e6567c6f4f7a6343672.gif"
+        let gif=document.getElementById("gif")
+        gif.append(img)
+    }
+
+};
+
+let cont=document.getElementById("continue").addEventListener("click",orderplaced)
+
+function orderplaced(){
+    let left=document.getElementById("placed")
+    left.style.display="none"
+
+    let box=document.getElementById("left")
+    let img=document.createElement("img")
+    img.src="https://cdn.dribbble.com/users/2139038/screenshots/4434155/ui-animation.gif"
+    img.style.height="400px"
+    let img2=document.createElement("img")
+    img2.style.height="400px"
+    img2.src="https://i.pinimg.com/originals/3b/06/4b/3b064b3b1b06b15202567dc8337e972f.gif"
+    box.append(img,img2)
+    
+
+}
+
+
+
+</script>

@@ -1,0 +1,63 @@
+#footer{
+    margin-top: 300px;
+    }
+    #up,#down{
+        width:100%;
+    }
+    #footer p{
+        color:gray;
+    }
+    #footerthing{
+        display: flex;
+        gap:10%;
+    }
+    .fa-light{
+        font-size: 20px;
+        color:black;
+    }
+    #footeremail{
+        border:0px;
+        border-bottom: 1px solid black;
+        height:20px;
+        margin-bottom: 20px;;
+    }
+    #footeremail::placeholder{
+        color: gray;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    #footergen{
+        display:flex;
+        gap:20px;
+    }
+    #footergen h4{
+        margin: 0;
+    }
+    .checkbox{
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+    #footersubmit{
+             height:55px;
+             width:250px;
+             border: 1px solid black;
+             text-align: center;
+             margin-top: 40px;
+             
+         }
+         #footersubmit:hover{
+             color: white;
+             background-color: black;
+             cursor: pointer;
+             
+         }
+         #logos{
+             display: flex;
+             justify-content: space-between;
+             font-size: 40px;
+         }
+         #footer h4:hover, #footer p:hover{
+             text-decoration: underline;
+             cursor: pointer;
+         }

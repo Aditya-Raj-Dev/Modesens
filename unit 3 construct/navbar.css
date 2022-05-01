@@ -1,0 +1,43 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+}
+#page{
+    display: flex;
+    gap:25px;
+    margin: 2px;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    
+}
+#page>h1{
+   margin: 10px;
+}
+.fa-regular,.fa-solid{
+ font-size: 30px;
+ margin-top: 2px;
+ 
+}
+#profile{
+  display: flex;
+  height: 40px;
+  gap:25px;
+  margin: 8px;
+}
+#search::placeholder{
+  color: black;
+  font-size: 20px;
+}
+#search{
+  border: 0px;
+  cursor: pointer;
+  margin-top: 2px;
+  width: 100px;
+}
+#women:hover,#men:hover,#beauty:hover,
+#kids:hover,#home:hover,#offer:hover,
+#designs:hover,#community:hover,#why:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: red;
+  
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5428de7a15.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <style>
+    *{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+       #box{
+         margin-top: 50px;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:40px;
+        text-align: center;
+      }
+      #box img{
+        height:300px;
+        
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header"></div>
+    <h1 style="text-align:center">DESIGNER BEAUTY</h1>
+    <div  id="box"></div>
+    <div id="foot"></div>
+</body>
+</html>
+<script src="../data/beauty.js"></script>
+<script type="module" src="../components/redirect.js">
+
+    import navbar from "../components/navbar.js"
+    console.log(navbar())
+
+   let header=document.getElementById("header")
+   header.innerHTML=navbar();
+</script>

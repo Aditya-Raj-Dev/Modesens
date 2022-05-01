@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5428de7a15.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <title>Document</title>
+    <style>
+        #slide img{
+            width:100%;
+            margin-bottom: 80px;
+        }
+        *{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #brands{
+        text-align: center;
+        margin-top: 40px;
+      }
+      #brands p{
+        color: grey;
+        font-size: 28px;
+
+      }
+      #gucci,#varsache{
+        display: flex;
+        gap:6%;
+        margin-bottom: 30px;;
+
+      }
+      #gucci img,#varsache img{
+        width:250px;
+      }
+
+      #trending{
+        text-align: center;
+        margin-top: 100px;
+      }
+      #box{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+      }
+      #box img{
+        height:300px;
+      }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="slide">
+        <img src="https://modesens.com/banner/11179/getimg/?img=%2Fbanner%2F20220309-modesens-Kids-1140x400.jpg " alt="">
+    </div>
+    <div id="brands">
+        <h1>Select Partners</h1>
+        <p>Compare across 500+ stores and 12,000+ brands to find the products you want, at the best price.</p>
+      </div>
+      <div id="gucci">
+       <img src="data:image/png;base64,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" alt="">
+       <img src="https://1000logos.net/wp-content/uploads/2017/05/Prada-logo.jpg" alt="">
+       <img src="https://1000logos.net/wp-content/uploads/2020/03/Saint-Laurent-logo.jpg" alt="">
+       <img src="https://1000logos.net/wp-content/uploads/2016/10/Burberry-logo.jpg" alt="">
+       <img src="https://1000logos.net/wp-content/uploads/2021/05/Bottega-Veneta-logo.png" alt="">
+      </div>
+      <div id="varsache">
+        <img src="https://png.pngitem.com/pimgs/s/160-1603176_versace-logo-png-transparent-versace-logo-png-png.png" alt="">
+        <img src="https://logos-world.net/wp-content/uploads/2021/08/Balenciaga-Logo-2013-2017.png" alt="">
+        <img src="https://www.vhv.rs/dpng/d/545-5458266_givenchy-pi-air-eau-de-toilette-spray-givenchy.png" alt="">
+        <img src="https://logos-download.com/wp-content/uploads/2016/03/Valentino_logo.png" alt="">
+        <img src="https://1000logos.net/wp-content/uploads/2021/03/Loewe-Logo-1846.png" alt="">
+      </div>
+      <div id="trending">
+        <hr>
+        <h1>Trending Now</h1>
+        <div id="box"></div>
+      </div>
+    <div id="foot"></div>
+</body>
+</html>
+<script>
+     var data=[
+    {
+      img:"https://www.alexandalexa.com/images/890443/external-large.jpg",
+      name:"BONPOINT",
+      type:"Kids'Striped",
+      price:`$${310}`,
+      op:  36673
+    },
+    {
+      img:"https://www.babyshop.com/images/1006521/card_xlarge.jpg",
+      name:"MINI RODINI",
+      type:"KIds'Girls",
+      price:`$${52}`,
+      op: 54389
+    },
+    {
+      img:"https://cdn.modesens.com/product/39224492_1?w=400&",
+      name:"MOLO",
+      type:"KIds'Girls",
+      price:`$${89}`,
+      op:  64877
+    },
+    {
+      img:"https://cdn.modesens.com/product/37559900_6?w=400&",
+      name:"GANT",
+      type:"Kids Benie In",
+      price:`$${27}`,
+      op:  230763
+    },
+  ]
+
+  var arr= []
+
+  let showdata=(data)=>{
+    let box=document.getElementById("box")
+    data.map((el)=>{
+      let div=document.createElement("div")
+
+      let img=document.createElement("img")
+      img.src=el.img;
+
+      let name=document.createElement("h2")
+      name.innerText=el.name;
+
+      let type=document.createElement("h4")
+      type.innerText=el.type;
+      type.style.color="grey";
+
+      let price=document.createElement("h4")
+      price.innerText=el.price;
+
+      let button=document.createElement("button")
+      button.innerText="View Product"
+      button.addEventListener("click",function(){
+        addtocart()
+      })
+      
+
+      div.append(img,name,type,price,button)
+      box.append(div)
+
+      function addtocart(){
+        arr.push(el)
+        localStorage.setItem("product",JSON.stringify(arr))
+        window.location.href="cart.html"
+         }
+
+    })
+  }
+  showdata(data)
+
+</script>
+<script type="module" src="../components/redirect.js">
+
+    import navbar from "../components/navbar.js"
+    console.log(navbar())
+
+   let header=document.getElementById("header")
+   header.innerHTML=navbar();
+</script>

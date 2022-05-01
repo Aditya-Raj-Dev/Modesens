@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5428de7a15.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../slider.css">
+    <style>
+      *{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+       #box{
+         margin-top: 100px;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:40px;
+        text-align: center;
+      }
+      #box img{
+        height:300px;
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header"></div>
+       <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 10</div>
+        <img src="https://modesens.com/banner/11668/getimg/?img=%2Fbanner%2F20220428-modesens-Italist-1140x400-M-EN.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 10</div>
+        <img src="https://modesens.com/banner/11665/getimg/?img=%2Fbanner%2F20220428-modesens-24S-1140x400-EN.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 10</div>
+        <img src="https://modesens.com/banner/11699/getimg/?img=%2Fbanner%2F20220429-modesens-Urban-1140x400-M.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides fade">
+          <div class="numbertext">4 / 10</div>
+          <img src="https://modesens.com/banner/11696/getimg/?img=%2Fbanner%2F20220429-modesens-Coach-1140x400-M-EN.jpg" style="width:100%">
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 10</div>
+          <img src="https://modesens.com/banner/11672/getimg/?img=%2Fbanner%2F20220428-modesens-NEST-1140x400-EN.jpg" style="width:100%">
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 10</div>
+          <img src="https://modesens.com/banner/11649/getimg/?img=%2Fbanner%2F20220426-modesens-StatementSandal-1140x400-M.jpg" style="width:100%">
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">7 / 10</div>
+          <img src="https://modesens.com/banner/11586/getimg/?img=%2Fbanner%2F20220419-modesens-TheBermudaShorts-1140x400-M.jpg" style="width:100%">
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">8 / 10</div>
+          <img src="https://modesens.com/banner/11646/getimg/?img=%2Fbanner%2F20220425-modesens-fendi-1140x400-M.jpg" style="width:100%">
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">9 / 10</div>
+          <img src="https://modesens.com/banner/11668/getimg/?img=%2Fbanner%2F20220428-modesens-Italist-1140x400-M-EN.jpg" style="width:100%">
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">10 / 10</div>
+          <img src="https://modesens.com/banner/11665/getimg/?img=%2Fbanner%2F20220428-modesens-24S-1140x400-EN.jpg" style="width:100%">
+        </div>
+  
+        
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+    <div id="box"></div>
+    <div id="foot"></div>
+</body>
+</html>
+<script src="../data/mens.js"></script>
+
+<script src="../components/slider.js">
+</script>
+<script type="module" src="../components/redirect.js">
+
+</script>

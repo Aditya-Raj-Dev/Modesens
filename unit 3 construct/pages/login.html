@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5428de7a15.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        color: rgba(51, 50, 50, 0.788);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    }
+    #show{
+        width:60%;
+        margin:auto;
+        margin-top: 50px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+         display: flex;
+   }
+   #create{
+       text-align: center;
+       width:50%;
+       margin-top: 50px;
+   }
+   #create h3{
+       width:70%;
+       text-align: center;
+       margin:auto;
+       margin-top: 50px;
+   }
+   #input input{
+       height: 50px;
+       width:300px;
+       border:1px solid black;
+       margin-bottom: 20px;
+   }
+#input{
+    display:flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 100px;
+   
+}
+::placeholder{
+    text-align: center;
+    font-size: larger;
+}
+button{
+    height: 50px;
+       width:300px;
+       background-color: black;
+       color:white;
+       font-size: larger;
+       margin-bottom: 50px;
+}
+button:hover{
+    background-color: white;
+       color:black;
+}
+#logo{
+    font-size:xx-large;
+}
+
+</style>
+<body>
+    <div id="show">
+     <div>
+         <img src="login.png" alt="">
+     </div>
+     <div id="create">
+         <h1>Create an account</h1>
+         <h3>Compare across 500+ stores
+            to find the best price.</h3>
+            <div id="input">
+                <input type="text" placeholder="EMAIL" id="email">
+                <input type="text" placeholder="PASSWORD" id="pass"> 
+            </div>
+            <button onclick="signup()">Sign Up</button>
+            <div id="logo">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter-square"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram-square"></i>
+                <i class="fa-brands fa-weixin"></i>
+            </div>
+     </div>
+
+
+    </div>
+</body>
+</html>
+<script>
+function signup(){
+    let email=document.getElementById("email").value
+    let pass=document.getElementById("pass").value
+
+    if(pass=="" || email===""){
+        alert("Please Fill The Details")
+    } else{
+        alert("login Success")
+        window.location.href="cart.html"
+    }
+}
+</script>
